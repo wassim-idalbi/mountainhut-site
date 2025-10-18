@@ -57,8 +57,8 @@
                 "instructions": "Find the word from the images",
                 "visualElements": [
                     "🍊",
-                    "/assets/images/haircut.webp",
-                    "/assets/images/usa.png"
+                    "https://mountainhut.co/assets/images/haircut.webp",
+                    "https://mountainhut.co/assets/images/usa.png"
                 ],
                 "hints": [
                     "Make America great again!",
@@ -251,9 +251,9 @@
                     "شخصية كرتونية يابانية"
                 ],
                 "visualElements": [
-                    "/assets/images/conan1.png",
-                    "/assets/images/conan2.png",
-                    "/assets/images/conan3.png"
+                    "https://mountainhut.co/assets/images/conan1.png",
+                    "https://mountainhut.co/assets/images/conan2.png",
+                    "https://mountainhut.co/assets/images/conan3.png"
                 ],
                 "puzzleData": {
                     "answers": [
