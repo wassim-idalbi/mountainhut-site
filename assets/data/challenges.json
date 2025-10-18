@@ -1,0 +1,390 @@
+{
+    "challenges": [
+        {
+            "id": "kitchen_challenge",
+            "order": 1,
+            "locationId": "kitchen",
+            "type": "letterPIN",
+            "ar": {
+                "title": "🍳 تحدي المطبخ - أوجد الكلمة من الشكل",
+                "instructions": "أوجد الكلمة من الشكلين",
+                "visualElements": [
+                    "آ",
+                    "🥕"
+                ],
+                "hints": [
+                    "ظاهرة طبيعية تحدث في البحر",
+                    "ترتفع وتنخفض المياه بانتظام",
+                    "تحدث بسبب جاذبية القمر والشمس"
+                ],
+                "puzzleData": {
+                    "solution": [
+                        "ا",
+                        "ل",
+                        "م",
+                        "د",
+                        "و",
+                        "ا",
+                        "ل",
+                        "ج",
+                        "ز",
+                        "ر"
+                    ],
+                    "wordStructure": [4, 1, 5],
+                    "guessButtons": [
+                        "ا",
+                        "ت",
+                        "ن",
+                        "م",
+                        "ل",
+                        "ك",
+                        "د",
+                        "ة",
+                        "و",
+                        "ا",
+                        "ط",
+                        "ل",
+                        "ج",
+                        "س",
+                        "ز",
+                        "ص",
+                        "ر"
+                    ]
+                }
+            },
+            "en": {
+                "title": "🍳 Kitchen Challenge - Find the Word",
+                "instructions": "Find the word from the images",
+                "visualElements": [
+                    "🍊",
+                    "/assets/images/haircut.webp",
+                    "/assets/images/usa.png"
+                ],
+                "hints": [
+                    "Make America great again!",
+                    "So much winning..",
+                    "FAKE NEWS"
+                ],
+                "puzzleData": {
+                    "wordStructure": [5],
+                    "solution": [
+                        "T",
+                        "R",
+                        "U",
+                        "M",
+                        "P"
+                    ],
+                    "guessButtons": [
+                        "T",
+                        "M",
+                        "P",
+                        "A",
+                        "E",
+                        "I",
+                        "O",
+                        "R",
+                        "N",
+                        "S",
+                        "L",
+                        "U",
+                        "D",
+                        "C",
+                        "H",
+                        "B",
+                        "K"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "green_seating_challenge",
+            "order": 2,
+            "locationId": "green_seating",
+            "type": "decipherEmojiMap",
+            "ar": {
+                "title": "🌿 تحدي الجلسة الخضراء - فك الشفرة",
+                "instructions": "استخدم مفتاح الشفرة لفك الرسالة المشفرة",
+                "hints": [
+                    "طائر يعيش في الغابات",
+                    "يصدر أصوات طرق على الأشجار",
+                    "له منقار قوي وطويل"
+                ],
+                "puzzleData": {
+                    "cipherKey": {
+                        "ا": "🔴",
+                        "ب": "💎",
+                        "ت": "🌟",
+                        "ث": "🔥",
+                        "ج": "🌊",
+                        "ح": "🌸",
+                        "خ": "🌙",
+                        "د": "⚡",
+                        "ذ": "🍀",
+                        "ر": "🔵",
+                        "ز": "🌈",
+                        "س": "🎯",
+                        "ش": "☀️",
+                        "ص": "🏔️",
+                        "ض": "🌺",
+                        "ط": "🎪",
+                        "ظ": "🎭",
+                        "ع": "🎨",
+                        "غ": "🎵",
+                        "ف": "🎲",
+                        "ق": "⭐",
+                        "ك": "🎊",
+                        "ل": "🔶",
+                        "م": "🎈",
+                        "ن": "🔺",
+                        "ه": "🎀",
+                        "و": "🎯",
+                        "ي": "🎪",
+                        "ة": "🌷",
+                        "ى": "🎶"
+                    },
+                    "encryptedMessage": "🔺 ⭐ 🔴 🔵 🔴 🔶 🌙 ☀️ 💎",
+                    "solution": "نقار الخشب"
+                }
+            },
+            "en": {
+                "title": "🌿 Green Seating Challenge - Decode the Secret",
+                "instructions": "Use the cipher key to decrypt the message",
+                "hints": [
+                    "Best place in UAE",
+                    "You go there to relax and enjoy time with family & friends",
+                    "YOU ARE IN IT!!"
+                ],
+                "puzzleData": {
+                    "cipherKey": {
+                        "A": "🔴",
+                        "B": "💎",
+                        "C": "🌟",
+                        "D": "🔥",
+                        "E": "🌊",
+                        "F": "🌸",
+                        "G": "🌙",
+                        "H": "⚡",
+                        "I": "🍀",
+                        "J": "🔵",
+                        "K": "🌈",
+                        "L": "🎯",
+                        "M": "🎈",
+                        "N": "🔺",
+                        "O": "🎀",
+                        "P": "☀️",
+                        "Q": "🏔️",
+                        "R": "🌺",
+                        "S": "🎪",
+                        "T": "🎭",
+                        "U": "🎨",
+                        "V": "🎵",
+                        "W": "🎲",
+                        "X": "⭐",
+                        "Y": "🎊",
+                        "Z": "🔶",
+                        " ": "💫"
+                    },
+                    "encryptedMessage": "🎈 🎀 🎨 🔺 🎭 🔴 🍀 🔺 💫 ⚡ 🎨 🎭",
+                    "solution": "MOUNTAIN HUT"
+                }
+            }
+        },
+        {
+            "id": "playground_challenge",
+            "order": 3,
+            "locationId": "playground",
+            "type": "extractAllWords",
+            "ar": {
+                "title": "⚽ تحدي ساحة اللعب - استخرج أربع كلمات من الرمز",
+                "instructions": "اضغط على الحروف لتكوين الكلمات المتعلقة بالرمز",
+                "visualElements": [
+                    "🧊"
+                ],
+                "hints": [
+                    "فكر في الطقس البارد والشتاء",
+                    "ما يحدث للماء عندما يبرد؟",
+                    "كلمات مثل: ثلج، بارد، جليد، ماء"
+                ],
+                "puzzleData": {
+                    "words": [
+                        "ثلج",
+                        "مكعب",
+                        "بارد",
+                        "ماء"
+                    ],
+                    "gridLetters": "عخدكمزءاالبربجثم"
+                }
+            },
+            "en": {
+                "title": "⚽ Playground Challenge - Find the Words that Represent the Image",
+                "instructions": "Click on letters to form words related to the image",
+                "visualElements": [
+                    "🧊"
+                ],
+                "hints": [
+                    "Think about cold weather and winter",
+                    "What happens to water when it gets cold?",
+                    "Words like: water, ice, cube, cold"
+                ],
+                "puzzleData": {
+                    "words": [
+                        "WATER",
+                        "ICE",
+                        "CUBE",
+                        "COLD"
+                    ],
+                    "gridLetters": "WUDAERICBELTOCCE"
+                }
+            }
+        },
+        {
+            "id": "barbecue_challenge",
+            "order": 4,
+            "locationId": "barbecue",
+            "type": "guessTheStringFromEmojis",
+            "ar": {
+                "title": "🔥 تحدي ركن الشواء - أوجد الشخصية",
+                "instructions": "أوجد الشخصية من الرموز",
+                "hints": [
+                    "محقق مشهور",
+                    "طفل صغير",
+                    "شخصية كرتونية يابانية"
+                ],
+                "visualElements": [
+                    "/assets/images/conan1.png",
+                    "/assets/images/conan2.png",
+                    "/assets/images/conan3.png"
+                ],
+                "puzzleData": {
+                    "answers": [
+                        "المحقق كونان",
+                        "محقق كونان",
+                        "كونان",
+                        "كوناَن"
+                    ]
+                }
+            },
+            "en": {
+                "title": "🔥 Barbecue Challenge - Guess the Word",
+                "instructions": "Identify the word from the emojis",
+                "hints": [
+                    "Come on its easy..",
+                    "The logo is bitten apple",
+                    "I can't help you more sorry.."
+                ],
+                "visualElements": [
+                    "🍎",
+                    "☎️"
+                ],
+                "puzzleData": {
+                    "answers": [
+                        "iPhone",
+                        "IPHONE",
+                        "iphone",
+                        "Iphone",
+                        "I phone",
+                        "i phone"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "bedroom_challenge",
+            "order": 5,
+            "locationId": "bedroom",
+            "type": "guessTheStringFromEmojis",
+            "ar": {
+                "title": "🛏️ تحدي غرفة النوم - أوجد المثل الشعبي",
+                "instructions": "أوجد المثل الشعبي من الرموز",
+                "hints": [
+                    "مثل شعبي مشهور عن الأمهات",
+                    "كل أم ترى ابنها جميلاً",
+                    "حتى لو كان قبيحاً في عين الآخرين"
+                ],
+                "visualElements": [
+                    "🐒",
+                    "👁️",
+                    "👩",
+                    "🦌"
+                ],
+                "puzzleData": {
+                    "answers": [
+                        "القرد في عين امه غزال",
+                        "قرد في عين امه غزال",
+                        "القرد في عين أمه غزال",
+                        "قرد في عين أمه غزال",
+                        "القرد بعين امه غزال",
+                        "القرد بعين أمه غزال",
+                        "قرد بعين امه غزال",
+                        "قرد بعين أمه غزال",
+                        "القرد في عين الام غزال",
+                        "القرد في عين الأم غزال",
+                        "قرد في عين الام غزال",
+                        "قرد في عين الأم غزال",
+                        "القرد عند الام غزال",
+                        "القرد عند الأم غزال",
+                        "قرد عند الام غزال",
+                        "قرد عند الأم غزال"
+                    ]
+                }
+            },
+            "en": {
+                "title": "🛏️ Bedroom Challenge - Find the Proverb",
+                "instructions": "Identify the popular proverb from the emojis",
+                "hints": [
+                    "Copy paste of you",
+                    "The apple doesn't fall far from the tree!",
+                    "He is so funny like his dad!"
+                ],
+                "visualElements": [
+                    "👶",
+                    "👌",
+                    "➡",
+                    "👨"
+                ],
+                "puzzleData": {
+                    "answers": [
+                        "like father like son",
+                        "Like father like son",
+                        "Like Father Like Son",
+                        "LIKE FATHER LIKE SON",
+                        "like father, like son",
+                        "Like father, like son"
+                    ]
+                }
+            }
+        },
+        {
+            "id": "tent_challenge",
+            "order": 6,
+            "locationId": "tent",
+            "type": "safeMath",
+            "ar": {
+                "title": "⛺ تحدي جلسة الخيمة - العملية الحسابية السرية",
+                "instructions": "احسب العملية للحصول على رمز الصندوق السري الناتج سيكون رمز الصندوق من 3 أرقام!",
+                "hints": [
+                    "ابدأ بحل ما داخل الأقواس أولاً، فهذه هي القاعدة الأولى في ترتيب العمليات",
+                    "داخل الأقواس، قم بعملية القسمة قبل الجمع. فكر: '12 ÷ 3' قبل '+ 2'",
+                    "بعد أن تجد الناتج داخل الأقواس، اضربه في 2 ثم اطرح 4 لتحصل على الإجابة النهائية"
+                ],
+                "puzzleData": {
+                    "question": "(12÷3×1)×114−4=?",
+                    "expectedResult": 452
+                }
+            },
+            "en": {
+                "title": "⛺ Tent Challenge - Secret Math Operation",
+                "instructions": "Solve the math problem to get the safe box code. The result will be a 3-digit code!",
+                "hints": [
+                    "Start by solving what's inside the parentheses first, this is the first rule of order of operations",
+                    "Inside the parentheses, do the division before addition. Think: '12 ÷ 3' before '+ 2'",
+                    "After you find the result inside the parentheses, multiply it by 2 then subtract 4 to get the final answer"
+                ],
+                "puzzleData": {
+                    "question": "(12÷3×1)×114−4=?",
+                    "expectedResult": 452
+                }
+            }
+        }
+    ]
+}

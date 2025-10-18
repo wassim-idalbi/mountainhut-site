@@ -1,0 +1,96 @@
+{
+    "buttonLabels": {
+        "startAdventure": "🚀 Start Adventure",
+        "checkAnswer": "✓ Check Answer",
+        "back": "← Back",
+        "submit": "← Submit",
+        "clear": "🗑️ Clear",
+        "confirmCode": "✅ Confirm Code",
+        "showHint": "💡 Show Hint",
+        "newAdventure": "🔄 New Adventure",
+        "restart": "🔄 Restart",
+        "leaderboard": "⚙️ Developer Panel"
+    },
+    "systemMessages": {
+        "correctAnswer": "✅ Correct Answer!",
+        "incorrectAnswer": "❌ Incorrect Answer",
+        "tryAgain": "Try Again",
+        "nextLocation": "Move to Next Location",
+        "currentLocation": "Your Current Location",
+        "congratulations": "🎉 Excellent! You solved the challenge!",
+        "codeIncorrect": "Code is Incorrect",
+        "codeCorrect": "✅ Code is Correct!",
+        "codeFormat": "Enter 4 characters only"
+    },
+    "navigationText": {
+        "nextArea": "Next Area",
+        "findCode": "Find the Code in this Area",
+        "enterCode": "Enter the Code Here",
+        "searchArea": "Search This Area",
+        "lookForSymbol": "Look for the Symbol"
+    },
+    "hints": {
+        "available": "Available Hints",
+        "usedUp": "Hints Used Up",
+        "remaining": "Remaining Hints"
+    },
+    "generalInstructions": {
+        "howToPlay": "How to Play",
+        "step1": "Solve the challenge at your current location",
+        "step2": "Move to the next location immediately",
+        "step3": "Search the area for a 4-character code",
+        "step4": "Enter the code to move to the next challenge"
+    },
+    "errorMessages": {
+        "invalidInput": "Invalid Input",
+        "required": "This field is required",
+        "emptyCode": "Please enter the code",
+        "networkError": "Connection Error",
+        "loadError": "Error loading data"
+    },
+    "successMessages": {
+        "levelComplete": "Level Complete!",
+        "gameComplete": "Excellent! You found the Treasure Key!",
+        "treasureFound": "🎊 Congratulations! You found the Final Treasure Key",
+        "allChallengesComplete": "All Challenges Complete - Final Key is Ready!"
+    },
+    "warnings": {
+        "noCodeReset": "No Code Reset Available at this Stage",
+        "keyReady": "Key is Ready for Use - No Code Substitution Needed"
+    },
+    "pageTitle": "Mountain Hut Adventure - Search for the Treasure Key",
+    "welcomeScreen": {
+        "title": "Welcome to the Mountain Hut Adventure!",
+        "subtitle": "Search for the hidden treasure key in the mountains"
+    },
+    "exchangeScreen": {
+        "nextLocationTitle": "📍 Your Next Location:",
+        "searchInstruction": "The code is written somewhere in the area - find it and enter it here",
+        "codeInputTitle": "🔒 Enter Area Code (4 Characters):",
+        "inputHint": "💡 You can paste the full code or use arrow keys to navigate"
+    },
+    "mathSolution": {
+        "title": "Excellent! You solved the math problem",
+        "safeCodeTitle": "🔐 Safe Box Code",
+        "safeCodeInstruction": "Enter the code 452 in the safe located in the area!",
+        "instructionsTitle": "🎯 Instructions",
+        "instructionsText": "Go to the real safe in the area and enter code 452 to get the treasure key!",
+        "openBoxButton": "The safe was opened and the key was obtained"
+    },
+    "victoryScreen": {
+        "openTreasureText": "Open the treasure with the key found inside the safe",
+        "keyTitle": "🗝️ Final Treasure Key",
+        "keyUsageText": "Use this key to open the treasure!"
+    },
+    "challengeScreen": {
+        "currentWordLabel": "Current Word:",
+        "currentWordPlaceholder": "Click on letters to form a word",
+        "foundWordsTitle": "Found Words",
+        "cipherKeyTitle": "🔑 Cipher Key:",
+        "encryptedMessageTitle": "📜 Encrypted Message:",
+        "cipherPlaceholder": "Type the decrypted answer here...",
+        "emojiPlaceholder1": "Type the character name here!",
+        "emojiPlaceholder2": "Type the popular saying here!",
+        "mathPlaceholder": "Calculate"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "codes": [
+        {
+            "locationId": "kitchen",
+            "correctCode": "X7Q9"
+        },
+        {
+            "locationId": "green_seating",
+            "correctCode": "M4K8"
+        },
+        {
+            "locationId": "playground",
+            "correctCode": "Z2P6"
+        },
+        {
+            "locationId": "barbecue",
+            "correctCode": "R5N3"
+        },
+        {
+            "locationId": "bedroom",
+            "correctCode": "W1T7"
+        },
+        {
+            "locationId": "tent",
+            "correctCode": "V9L4"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "locations": [
+        {
+            "id": "kitchen",
+            "nameAr": "المطبخ",
+            "nameEn": "Kitchen",
+            "emoji": "🍳"
+        },
+        {
+            "id": "green_seating",
+            "nameAr": "الجلسة الخضراء",
+            "nameEn": "Green Seating Area",
+            "emoji": "🌿"
+        },
+        {
+            "id": "playground",
+            "nameAr": "ساحة اللعب",
+            "nameEn": "Playground",
+            "emoji": "⚽"
+        },
+        {
+            "id": "barbecue",
+            "nameAr": "ركن الشواء",
+            "nameEn": "Barbecue Corner",
+            "emoji": "🔥"
+        },
+        {
+            "id": "bedroom",
+            "nameAr": "غرفة النوم",
+            "nameEn": "Bedroom",
+            "emoji": "🛏️"
+        },
+        {
+            "id": "tent",
+            "nameAr": "جلسة الخيمة",
+            "nameEn": "Tent Area",
+            "emoji": "⛺"
+        }
+    ]
+}

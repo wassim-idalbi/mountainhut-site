@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مغامرة الكوخ الجبلي - البحث عن مفتاح الكنز</title>
+    <link rel="stylesheet" href="assets/styles/variables.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/challenges.css">
+    <link rel="stylesheet" href="assets/styles/animations.css">
+    <link rel="stylesheet" href="assets/styles/toast.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- remember to update these when modifying images -->
+    <link rel="preload" as="image" href="/assets/images/kitchen.jpg">
+    <link rel="preload" as="image" href="/assets/images/greenery.jpg">
+    <link rel="preload" as="image" href="/assets/images/playground.jpg">
+    <link rel="preload" as="image" href="/assets/images/barbecue.jpg">
+    <link rel="preload" as="image" href="/assets/images/hut.jpg">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="header-title floating-animation" data-i18n="welcomeScreen.title">🏔️ مغامرة الكوخ الجبلي</h1>
+            <p class="header-subtitle" data-i18n="welcomeScreen.subtitle">البحث عن مفتاح الكنز</p>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-step">🍳</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">🌿</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">⚽</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">🔥</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">🛏️</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">⛺</div>
+                <div class="progress-line"></div>
+                <div class="progress-step">🥇</div>
+            </div>
+        </div>
+
+        <!-- Screen 1: Welcome Screen -->
+        <div class="game-card">
+            <div class="screen welcome-screen">
+                <div class="icon-large floating-animation">🏔️</div>
+                <h2 class="screen-title" data-i18n="welcomeScreen.title">مرحباً بك في مغامرة الكوخ الجبلي!</h2>
+                <p class="screen-text" data-i18n="welcomeScreen.subtitle">ابحث عن مفتاح الكنز المخفي في الجبال</p>
+
+                <div class="info-box">
+                    <h3 class="info-title" data-i18n="generalInstructions.howToPlay">🎯 كيف تعمل اللعبة:</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-number">1️⃣</div>
+                            <div class="info-label" data-i18n="generalInstructions.step1">حل التحدي</div>
+                            <div class="info-desc" data-i18n="generalInstructions.step1">أجب على التحدي في الموقع الحالي</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-number">2️⃣</div>
+                            <div class="info-label" data-i18n="generalInstructions.step2">انتقل للموقع التالي</div>
+                            <div class="info-desc" data-i18n="generalInstructions.step2">اذهب للمنطقة الجديدة مباشرة</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-number">3️⃣</div>
+                            <div class="info-label" data-i18n="generalInstructions.step3">ابحث عن الرمز</div>
+                            <div class="info-desc" data-i18n="generalInstructions.step3">ابحث في المنطقة عن رمز من 4 خانات</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-number">4️⃣</div>
+                            <div class="info-label" data-i18n="generalInstructions.step4">أدخل الرمز</div>
+                            <div class="info-desc" data-i18n="generalInstructions.step4">ادخل الرمز للانتقال للتحدي التالي</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="locations-box">
+                    <h3 class="locations-title" data-i18n="navigationText.searchArea">📍 مواقع الكوخ الجبلي:</h3>
+                    <div class="locations-grid">
+                        <div><span data-location="kitchen" data-location-field="emoji">🍳</span> <span data-location="kitchen" data-location-field="name">المطبخ</span></div>
+                        <div><span data-location="green_seating" data-location-field="emoji">🌿</span> <span data-location="green_seating" data-location-field="name">الجلسة الخضراء</span></div>
+                        <div><span data-location="playground" data-location-field="emoji">⚽</span> <span data-location="playground" data-location-field="name">ساحة اللعب</span></div>
+                        <div><span data-location="barbecue" data-location-field="emoji">🔥</span> <span data-location="barbecue" data-location-field="name">ركن الشواء</span></div>
+                        <div><span data-location="bedroom" data-location-field="emoji">🛏️</span> <span data-location="bedroom" data-location-field="name">غرفة النوم</span></div>
+                        <div><span data-location="tent" data-location-field="emoji">⛺</span> <span data-location="tent" data-location-field="name">جلسة الخيمة</span></div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-large" data-i18n="buttonLabels.startAdventure">🚀 ابدأ المغامرة</button>
+            </div>
+        </div>
+
+        <!-- Screen 2: Challenge #1 guess letter pin from -->
+        <div class="game-card">
+            <div class="screen challenge-screen" data-challenge-id="kitchen_challenge">
+                <h2 class="screen-title" data-challenge-content="title">🍳 تحدي المطبخ - أوجد الكلمة من الشكل</h2>
+                <img class="thumbnail" src="/assets/images/kitchen.jpg" alt="" srcset="">
+                <div class="location-badge">📍 <span data-i18n="systemMessages.currentLocation">موقعك الحالي</span>: <span data-location="kitchen" data-location-field="name">المطبخ</span></div>
+
+                <div class="challenge-images" data-challenge-content="visualElements">
+                    <div class="challenge-emoji">آ</div>
+                    <div class="challenge-plus">+</div>
+                    <div class="challenge-emoji">🥕</div>
+                </div>
+                <p class="challenge-instruction" data-challenge-content="instructions">أوجد الكلمة من الشكلين</p>
+
+                <div class="word-slots-container">
+                    <!-- Slots will be generated here dynamically -->
+                </div>
+                
+                <div class="letter-buttons" data-challenge-content="puzzleData.guessButtons">
+                    <button class="letter-btn">ا</button>
+                    <button class="letter-btn">ت</button>
+                    <button class="letter-btn">ن</button>
+                    <button class="letter-btn">م</button>
+                    <button class="letter-btn">ل</button>
+                    <button class="letter-btn">ك</button>
+                    <button class="letter-btn">د</button>
+                    <button class="letter-btn">ة</button>
+                    <button class="letter-btn">و</button>
+                    <button class="letter-btn">ا</button>
+                    <button class="letter-btn">ط</button>
+                    <button class="letter-btn">ل</button>
+                    <button class="letter-btn">ج</button>
+                    <button class="letter-btn">س</button>
+                    <button class="letter-btn">ز</button>
+                    <button class="letter-btn">ص</button>
+                    <button class="letter-btn">ر</button>
+                </div>
+
+                <div class="letter-pin-clear-container">
+                    <button class="btn btn-secondary btn-small letter-pin-clear-btn" data-i18n="buttonLabels.clear">🗑️ مسح</button>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-back" data-i18n="buttonLabels.back">← رجوع</button>
+                    <button class="btn btn-primary" data-i18n="buttonLabels.checkAnswer">✓ تحقق من الإجابة</button>
+                </div>
+
+                <div class="hints-box">
+                    <h3 class="hints-title" data-i18n="hints.available">💡 التلميحات المتاحة (3/3):</h3>
+                    <div class="hints-container" data-challenge-content="hints">
+                        <button class="hint-btn" data-i18n="buttonLabels.showHint">🔓 اظهار التلميح</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 2: Challenge #2 decipherEmojiMap -->
+        <div class="game-card">
+            <div class="screen challenge-screen" data-challenge-id="green_seating_challenge">
+                <h2 class="screen-title" data-challenge-content="title">🌿 تحدي الجلسة الخضراء - فك الشفرة</h2>
+                <img class="thumbnail" src="/assets/images/greenery.jpg" alt="" srcset="">
+                <div class="location-badge">📍 <span data-i18n="systemMessages.currentLocation">موقعك الحالي</span>: <span data-location="green_seating" data-location-field="name">الجلسة الخضراء</span></div>
+                
+                <!-- محتوى التحدي الخاص -->
+                <div class="cipher-key-box">
+                    <h3 class="cipher-key-title" data-i18n="challengeScreen.cipherKeyTitle">🔑 مفتاح الشفرة:</h3>
+                    <div class="cipher-grid" data-challenge-content="puzzleData.cipherKey">
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ا</div>
+                            <div class="cipher-symbol">🔴</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ب</div>
+                            <div class="cipher-symbol">💎</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ت</div>
+                            <div class="cipher-symbol">🌟</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ث</div>
+                            <div class="cipher-symbol">🔥</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ج</div>
+                            <div class="cipher-symbol">🌊</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ح</div>
+                            <div class="cipher-symbol">🌸</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">خ</div>
+                            <div class="cipher-symbol">🌙</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">د</div>
+                            <div class="cipher-symbol">⚡</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ذ</div>
+                            <div class="cipher-symbol">🍀</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ر</div>
+                            <div class="cipher-symbol">🔵</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ز</div>
+                            <div class="cipher-symbol">🌈</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">س</div>
+                            <div class="cipher-symbol">🎯</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ش</div>
+                            <div class="cipher-symbol">☀️</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ص</div>
+                            <div class="cipher-symbol">🏔️</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ض</div>
+                            <div class="cipher-symbol">🌺</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ط</div>
+                            <div class="cipher-symbol">🎪</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ظ</div>
+                            <div class="cipher-symbol">🎭</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ع</div>
+                            <div class="cipher-symbol">🎨</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">غ</div>
+                            <div class="cipher-symbol">🎵</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ف</div>
+                            <div class="cipher-symbol">🎲</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ق</div>
+                            <div class="cipher-symbol">⭐</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ك</div>
+                            <div class="cipher-symbol">🎊</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ل</div>
+                            <div class="cipher-symbol">🔶</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">م</div>
+                            <div class="cipher-symbol">🎈</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ن</div>
+                            <div class="cipher-symbol">🔺</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ه</div>
+                            <div class="cipher-symbol">🎀</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">و</div>
+                            <div class="cipher-symbol">🎯</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ي</div>
+                            <div class="cipher-symbol">🎪</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ة</div>
+                            <div class="cipher-symbol">🌷</div>
+                        </div>
+                        <div class="cipher-item">
+                            <div class="cipher-letter">ى</div>
+                            <div class="cipher-symbol">🎶</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cipher-message-box">
+                    <h3 class="cipher-key-title" data-i18n="challengeScreen.encryptedMessageTitle">📜 الرسالة المشفرة:</h3>
+                    <div class="cipher-message" data-challenge-content="puzzleData.encryptedMessage">
+                        <p>🔺 ⭐ 🔴 🔵 🔴 🔶 🌙 ☀️ 💎</p>
+                    </div>
+                </div>
+                <div class="text-input">
+                    <input type="text" id="cipherAnswer" placeholder="أكتب الإجابة المفكوكة هنا..." data-i18n-attr="placeholder" data-i18n="challengeScreen.cipherPlaceholder">
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-back" data-i18n="buttonLabels.back">← رجوع</button>
+                    <button class="btn btn-primary" data-i18n="buttonLabels.checkAnswer">✓ تحقق من الإجابة</button>
+                </div>
+                <div class="hints-box">
+                    <h3 class="hints-title" data-i18n="hints.available">💡 التلميحات المتاحة (3/3):</h3>
+                    <div class="hints-container" data-challenge-content="hints">
+                        <button class="hint-btn" data-i18n="buttonLabels.showHint">🔓 اظهار التلميح</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Screen 2: Challenge #3 extractAllWords -->
+        <div class="game-card">
+            <div class="screen challenge-screen" data-challenge-id="playground_challenge">
+                <h2 class="screen-title" data-challenge-content="title">⚽ تحدي ساحة اللعب - استخرج اربع كلمات من الرمز</h2>
+                <img class="thumbnail" src="/assets/images/playground.jpg" alt="" srcset="">
+                <div class="location-badge">📍 <span data-i18n="systemMessages.currentLocation">موقعك الحالي</span>: <span data-location="playground" data-location-field="name">ساحة اللعب</span></div>
+                <div class="challenge-images" data-challenge-content="visualElements">
+                    <div class="challenge-emoji">🧊</div>
+                </div>
+                <div class="challenge-instruction">
+                    <p data-challenge-content="instructions">اضغط على الحروف لتكوين الكلمات المتعلقة بالرمز</p>
+                </div>
+
+                <div class="crossword-container">
+                    <div class="letter-grid" data-challenge-content="puzzleData.gridLetters">
+                        <div class="letter-cell">ص</div>
+                        <div class="letter-cell">ب</div>
+                        <div class="letter-cell">ك</div>
+                        <div class="letter-cell">ع</div>
+                        <div class="letter-cell">ث</div>
+                        <div class="letter-cell">م</div>
+                        <div class="letter-cell">ل</div>
+                        <div class="letter-cell">م</div>
+                        <div class="letter-cell">ك</div>
+                        <div class="letter-cell">ج</div>
+                        <div class="letter-cell">ا</div>
+                        <div class="letter-cell">ا</div>
+                        <div class="letter-cell">د</div>
+                        <div class="letter-cell">ر</div>
+                        <div class="letter-cell">ء</div>
+                        <div class="letter-cell">ب</div>                            
+                    </div>
+                </div>
+                <!-- Current word -->
+                <div class="current-word-box">
+                    <div class="current-word-label" data-i18n="challengeScreen.currentWordLabel">الكلمة الحالية:</div>
+                    <div class="current-word-display" data-i18n="challengeScreen.currentWordPlaceholder">اضغط على الحروف لتكوين كلمة</div>
+                </div>
+                <!-- Discovered words -->
+                <div class="found-words-box">
+                    <h3 class="found-words-title" data-i18n="challengeScreen.foundWordsTitle">الكلمات المكتشفة (0/4):</h3>
+                    <div class="found-words-grid">
+                        <div class="found-word-slot">???</div>
+                        <div class="found-word-slot">???</div>
+                        <div class="found-word-slot">???</div>
+                        <div class="found-word-slot">???</div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-back" data-i18n="buttonLabels.back">← رجوع</button>
+                    <button class="btn btn-primary" data-i18n="buttonLabels.checkAnswer">✓ تحقق من الإجابة</button>
+                </div>
+                <div class="hints-box">
+                    <h3 class="hints-title" data-i18n="hints.available">💡 التلميحات المتاحة (3/3):</h3>
+                    <div class="hints-container" data-challenge-content="hints">
+                        <button class="hint-btn" data-i18n="buttonLabels.showHint">🔓 اظهار التلميح</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 2: Challenge #4 guessTheStringFromEmojis -->
+        <div class="game-card">
+            <div class="screen challenge-screen" data-challenge-id="barbecue_challenge">
+                <h2 class="screen-title" data-challenge-content="title">🔥 تحدي ركن الشواء - أوجد الشخصية</h2>
+                <img class="thumbnail" src="/assets/images/barbecue.jpg" alt="" srcset="">
+                <div class="location-badge">📍 <span data-i18n="systemMessages.currentLocation">موقعك الحالي</span>: <span data-location="barbecue" data-location-field="name">ركن الشواء</span></div>
+                <div class="challenge-instruction"><p data-challenge-content="instructions">أوجد الشخصية من الرموز</p></div>
+
+                <div class="challenge-images" data-challenge-content="visualElements">
+                    <div class="challenge-emoji">
+                        <p>
+                            <img src="/assets/images/conan1.png" alt="Challenge Image" class="challenge-emoji-img"><img src="/assets/images/conan2.png" alt="Challenge Image" class="challenge-emoji-img"><img src="/assets/images/conan3.png" alt="Challenge Image" class="challenge-emoji-img">
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-input">
+                    <input type="text" placeholder="إكتبِ الشخصية هُنا!" data-i18n-attr="placeholder" data-i18n="challengeScreen.emojiPlaceholder1">
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-back" data-i18n="buttonLabels.back">← رجوع</button>
+                    <button class="btn btn-primary" data-i18n="buttonLabels.checkAnswer">✓ تحقق من الإجابة</button>
+                </div>
+                <div class="hints-box">
+                    <h3 class="hints-title" data-i18n="hints.available">💡 التلميحات المتاحة (3/3):</h3>
+                    <div class="hints-container" data-challenge-content="hints">
+                        <button class="hint-btn" data-i18n="buttonLabels.showHint">🔓 اظهار التلميح</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 2: Challenge #5 guessTheStringFromEmojis -->
+        <div class="game-card">
+            <div class="screen challenge-screen" data-challenge-id="bedroom_challenge">
+                <h2 class="screen-title" data-challenge-content="title">🛏️ تحدي غرفة النوم - أوجد المثل من الرموز</h2>
+                <img class="thumbnail" src="/assets/images/playground.jpg" alt="" srcset="">
+                <div class="location-badge">📍 <span data-i18n="systemMessages.currentLocation">موقعك الحالي</span>: <span data-location="bedroom" data-location-field="name">غرفة النوم</span></div>
+                <div class="challenge-instruction"><p data-challenge-content="instructions">أوجد المثل الشعبي من الرموز</p></div>
+
+                <div class="challenge-images" data-challenge-content="visualElements">
+                    <div class="challenge-emoji">
+                        <p>🐒👁️👩🦌</p>
+                    </div>
+                </div>
+
+                <div class="text-input">
+                    <input type="text" placeholder="إكتبِ المثل الشعبي هُنا!" data-i18n-attr="placeholder" data-i18n="challengeScreen.emojiPlaceholder2">
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-back" data-i18n="buttonLabels.back">← رجوع</button>
+                    <button class="btn btn-primary" data-i18n="buttonLabels.checkAnswer">✓ تحقق من الإجابة</button>
+                </div>
+                <div class="hints-box">
+                    <h3 class="hints-title" data-i18n="hints.available">💡 التلميحات المتاحة (3/3):</h3>
+                    <div class="hints-container" data-challenge-content="hints">
+                        <button class="hint-btn" data-i18n="buttonLabels.showHint">🔓 اظهار التلميح</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Screen 2: Challenge #6 solveMath -->
+        <div class="game-card">
+            <div class="screen challenge-screen" data-challenge-id="tent_challenge">
+                <h2 class="screen-title" data-challenge-content="title">⛺ تحدي جلسة الخيمة - العملية الحسابية السرية</h2>
+                <img class="thumbnail" src="/assets/images/hut.jpg" alt="" srcset="">
+                <div class="location-badge">📍 <span data-i18n="systemMessages.currentLocation">موقعك الحالي</span>: <span data-location="tent" data-location-field="name">جلسة الخيمة</span></div>
+
+                <div class="challenge-images">
+                    <div class="challenge-emoji">
+                        <p>🔢</p>
+                    </div>
+                </div>
+                
+                <div class="challenge-instruction"><p data-challenge-content="instructions">احسب العملية للحصول على رمز الصندوق السري الناتج سيكون رمز الصندوق من 3 أرقام!</p></div>
+
+                <div class="math-problems">
+                    <div class=math-problem>
+                        <div class="math-question" data-challenge-content="puzzleData.question">
+                            <p>(12÷3×1)×114−4=?</p>
+                        </div>
+                        <div class="math-input">
+                            <input type="number" placeholder="احسب" data-i18n-attr="placeholder" data-i18n="challengeScreen.mathPlaceholder">
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-back" data-i18n="buttonLabels.back">← رجوع</button>
+                    <button class="btn btn-primary" data-i18n="buttonLabels.checkAnswer">✓ تحقق من الإجابة</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 3: Exchange Screen -->
+        <div class="game-card">
+            <div class="screen exchange-screen">
+                <div class="icon-large floating-animation">🔑</div>
+                <h2 class="screen-title" data-i18n="navigationText.enterCode">أدخل رمز المنطقة</h2>
+
+                <div class="success-message">
+                    <div class="success-icon">🎉</div>
+                    <h3 class="success-title" data-i18n="systemMessages.congratulations">✅ ممتاز! حللت التحدي بنجاح!</h3>
+                    <p class="success-text" data-i18n="systemMessages.nextLocation">الآن انتقل للموقع التالي</p>
+                </div>
+
+                <div class="next-location-box">
+                    <h3 class="next-location-title" data-i18n="exchangeScreen.nextLocationTitle">📍 موقعك التالي:</h3>
+                    <img class="thumbnail next-location-thumbnail" src="" alt="Next Location">
+                    <p class="next-location-name" data-location="green_seating" data-location-field="name">الجلسة الخضراء</p>
+                    <div class="search-instruction">
+                        <strong data-i18n="navigationText.findCode">ابحث عن الرمز في المنطقة</strong>
+                        <span data-i18n="exchangeScreen.searchInstruction">الرمز مكتوب في مكان ما في المنطقة - ابحث عنه وأدخله هنا</span>
+                    </div>
+                </div>
+
+                <div class="code-input-box">
+                    <h3 class="code-input-title" data-i18n="exchangeScreen.codeInputTitle">🔒 أدخل رمز المنطقة (4 خانات):</h3>
+                    <div class="code-inputs">
+                        <input type="text" class="exchange-input" maxlength="1">
+                        <input type="text" class="exchange-input" maxlength="1">
+                        <input type="text" class="exchange-input" maxlength="1">
+                        <input type="text" class="exchange-input" maxlength="1">
+                    </div>
+                    <button class="btn btn-secondary btn-small" data-i18n="buttonLabels.clear">🗑️ مسح</button>
+                    <p class="input-hint" data-i18n="exchangeScreen.inputHint">💡 يمكنك لصق الكود كاملاً أو استخدام الأسهم للتنقل</p>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary btn-back" data-i18n="buttonLabels.back">← رجوع</button>
+                    <button class="btn btn-warning" data-i18n="buttonLabels.confirmCode">✅ تأكيد الرمز</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- screen 4: instructions to win the game -->
+        <div class="game-card">
+            <div class="screen final-screen treasure-instructions-screen">
+                <div class="icon-large floating-animation">🎉</div>
+                <h2 class="screen-title" data-i18n="mathSolution.title">ممتاز! حللت العملية الحسابية</h2>
+
+                <div class="treasure-key-box">
+                    <h3 class="treasure-key-title" data-i18n="mathSolution.safeCodeTitle">🔐 رمز الصندوق</h3>
+                    <div class="treasure-key-code">452</div>
+                    <p class="treasure-key-text" data-i18n="mathSolution.safeCodeInstruction">ادخل الرمز 452 في الصندوق الموجود في المكان!</p>
+                </div>
+
+                <div class="completion-box">
+                    <h3 class="completion-title" data-i18n="mathSolution.instructionsTitle">🎯 التعليمات</h3>
+                    <p class="completion-text" data-i18n="mathSolution.instructionsText">اذهب للصندوق الحقيقي في المنطقة وادخل الرمز 452 لتحصل على مفتاح الكنز!</p>
+                </div>
+
+                <button class="btn btn-primary btn-large" data-i18n="mathSolution.openBoxButton">تم فتح الصندوق والحصول على المفتاح</button>
+            </div>
+        </div>
+
+        <!-- Screen 5: Final Screen -->
+        <div class="game-card">
+            <div class="screen final-screen victory-screen">
+                <div class="icon-large floating-animation">🏆</div>
+                <h2 class="screen-title" data-i18n="successMessages.gameComplete">مبروك! وجدت مفتاح الكنز!</h2>
+                <p class="screen-text" data-i18n="successMessages.allChallengesComplete">لقد أكملت جميع التحديات في الكوخ الجبلي</p>
+
+                <div class="final-success-box">
+                    <div class="final-icon">🎊</div>
+                    <h3 class="final-title" data-i18n="successMessages.treasureFound">مبروووووووك!</h3>
+                    <p class="final-text" data-i18n="victoryScreen.openTreasureText">افتح الكنز بالمفتاح الموجود داخل الصندوق</p>
+                </div>
+
+                <div class="treasure-key-box">
+                    <h3 class="treasure-key-title" data-i18n="victoryScreen.keyTitle">🗝️ مفتاح الكنز النهائي</h3>
+                    <div class="treasure-key-code">452</div>
+                    <p class="treasure-key-text" data-i18n="victoryScreen.keyUsageText">استخدم هذا المفتاح لفتح الكنز!</p>
+                </div>
+
+                <div class="warning-box">
+                    <h3 class="warning-title" data-i18n="warnings.noCodeReset">⚠️ تنبيه مهم!</h3>
+                    <p class="warning-text" data-i18n="warnings.noCodeReset">لا يوجد رمز استبدال في هذه المرحلة</p>
+                    <p class="warning-subtext" data-i18n="warnings.keyReady">المفتاح جاهز للاستخدام مباشرة - لا حاجة لاستبدال أي رموز</p>
+                </div>
+
+                <div class="completion-box">
+                    <h3 class="completion-title" data-i18n="successMessages.levelComplete">🎯 انتهت المغامرة!</h3>
+                    <p class="completion-text" data-i18n="successMessages.allChallengesComplete">تم إنجاز جميع التحديات - المفتاح النهائي جاهز!</p>
+                </div>
+
+                <button class="btn btn-primary btn-large" data-i18n="buttonLabels.newAdventure">🔄 ابدأ مغامرة جديدة</button>
+            </div>
+        </div>
+        <div class="bottom-nav">
+            <button class="btn btn-secondary" data-i18n="buttonLabels.restart">🔄 إعادة تشغيل</button>
+            <button id="languageSwitchBtn" class="btn btn-secondary" data-current-lang="ar">🌐 English</button>
+        </div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

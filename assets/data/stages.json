@@ -1,0 +1,29 @@
+{
+    "stages": [
+        {
+            "id": "home",
+            "nameAr": "الشاشة الرئيسية",
+            "nameEn": "Home Screen"
+        },
+        {
+            "id": "puzzle",
+            "nameAr": "شاشة التحدي",
+            "nameEn": "Challenge Screen"
+        },
+        {
+            "id": "code",
+            "nameAr": "شاشة إدخال الرمز",
+            "nameEn": "Code Entry Screen"
+        },
+        {
+            "id": "treasure_instructions",
+            "nameAr": "شاشة تعليمات الكنز",
+            "nameEn": "Treasure Instructions Screen"
+        },
+        {
+            "id": "prize",
+            "nameAr": "شاشة الجائزة",
+            "nameEn": "Prize Screen"
+        }
+    ]
+}
